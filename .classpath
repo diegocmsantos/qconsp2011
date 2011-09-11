@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
@@ -6,3 +7,12 @@
 	<classpathentry kind="lib" path="/Users/diegocmsantos/Downloads/google-gson-1.7.1/gson-1.7.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
+>>>>>>> ca2e7340ad4acbef040a7994df5439de5a30b20e

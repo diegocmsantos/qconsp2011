@@ -7,7 +7,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import br.com.delxmobile.qconsp.R;
+<<<<<<< HEAD
 import br.com.delxmobile.qconsp.objects.Palestra.Palestras;
+=======
+>>>>>>> ca2e7340ad4acbef040a7994df5439de5a30b20e
 import br.com.delxmobile.qconsp.util.ActivityHelper;
 
 public class DashboardActivity extends Activity {
@@ -27,11 +30,15 @@ public class DashboardActivity extends Activity {
 		Button sabado = (Button) findViewById(R.id.home_btn_sabado);
 		sabado.setOnClickListener(new Button.OnClickListener() {
 			public void onClick(View v) {
+<<<<<<< HEAD
 				Intent it = new Intent(DashboardActivity.this, ListPalestra.class);
 				it.putExtra(Palestras.DIA, "Sabado");
 				it.putExtra(Palestras.TRILHA, 0);
 				startActivity(it);
 				
+=======
+				startActivity(new Intent(DashboardActivity.this, PalestraSabado.class));
+>>>>>>> ca2e7340ad4acbef040a7994df5439de5a30b20e
 			}
 		}); 
 
@@ -39,11 +46,16 @@ public class DashboardActivity extends Activity {
 		Button domingo = (Button) findViewById(R.id.home_btn_domingo);
 		domingo.setOnClickListener(new Button.OnClickListener() {
 			public void onClick(View v) {
+<<<<<<< HEAD
 				Intent it = new Intent(DashboardActivity.this, ListPalestra.class);
 				it.putExtra(Palestras.DIA, "Domingo");
 				it.putExtra(Palestras.TRILHA, 0);
 				startActivity(it);		
 				}
+=======
+				startActivity(new Intent(DashboardActivity.this, PalestraSabado.class));
+			}
+>>>>>>> ca2e7340ad4acbef040a7994df5439de5a30b20e
 		});
 		
 		//Palestrantes
@@ -58,7 +70,11 @@ public class DashboardActivity extends Activity {
 		Button mapa = (Button) findViewById(R.id.home_btn_mapa);
 		mapa.setOnClickListener(new Button.OnClickListener() {
 			public void onClick(View v) {
+<<<<<<< HEAD
 				startActivity(new Intent(DashboardActivity.this, Local.class));
+=======
+				startActivity(new Intent(DashboardActivity.this, PalestraSabado.class));
+>>>>>>> ca2e7340ad4acbef040a7994df5439de5a30b20e
 			}
 		}); 
 		
@@ -66,14 +82,22 @@ public class DashboardActivity extends Activity {
 		Button lembrar = (Button) findViewById(R.id.home_btn_lembrar);
 		lembrar.setOnClickListener(new Button.OnClickListener() {
 			public void onClick(View v) {
+<<<<<<< HEAD
 				startActivity(new Intent(DashboardActivity.this, ListPalestra.class));
+=======
+				startActivity(new Intent(DashboardActivity.this, PalestraSabado.class));
+>>>>>>> ca2e7340ad4acbef040a7994df5439de5a30b20e
 			}
 		}); 
 		//Twitter
 		Button twitter = (Button) findViewById(R.id.home_btn_twitter);
 		twitter.setOnClickListener(new Button.OnClickListener() {
 			public void onClick(View v) {
+<<<<<<< HEAD
 				startActivity(new Intent(DashboardActivity.this, TwitterActivity.class));
+=======
+				startActivity(new Intent(DashboardActivity.this, PalestraSabado.class));
+>>>>>>> ca2e7340ad4acbef040a7994df5439de5a30b20e
 			}
 		}); 
 

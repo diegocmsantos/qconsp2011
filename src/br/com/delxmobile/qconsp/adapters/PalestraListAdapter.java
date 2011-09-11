@@ -7,7 +7,10 @@ import br.com.delxmobile.qconsp.objects.Palestra;
 import br.com.delxmobile.qconsp.objects.Palestrante;
 import br.com.delxmobile.qconsp.scripts.RepositorioPalestranteScript;
 import android.content.Context;
+<<<<<<< HEAD
 import android.util.Log;
+=======
+>>>>>>> ca2e7340ad4acbef040a7994df5439de5a30b20e
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,13 +45,18 @@ public class PalestraListAdapter extends BaseAdapter {
 
 		RepositorioPalestrante repositorio = new RepositorioPalestranteScript(context);
 		Palestrante aux_palestrante = repositorio.buscarPalestranteNome(c.palestrante);
+<<<<<<< HEAD
 
+=======
+		
+>>>>>>> ca2e7340ad4acbef040a7994df5439de5a30b20e
 		LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		View view = inflater.inflate(R.layout.palestra_linha_tabela, null);
 
 		// Atualiza o valor do TextView
 		TextView titulo = (TextView) view.findViewById(R.id.palestra);
 		titulo.setText(c.titulo);
+<<<<<<< HEAD
 
 		TextView horario = (TextView) view.findViewById(R.id.horario);
 		horario.setText(c.horario);
@@ -69,6 +77,22 @@ public class PalestraListAdapter extends BaseAdapter {
 	}
 	public Integer[] fotos = {
 			R.drawable.w01,
+=======
+		
+		TextView palestrante = (TextView) view.findViewById(R.id.palestrante);
+		palestrante.setText(c.palestrante);
+
+		TextView horario = (TextView) view.findViewById(R.id.horario);
+		horario.setText(c.horario);
+		
+		ImageView foto = (ImageView) view.findViewById(R.id.foto);
+		foto.setImageResource(fotos[aux_palestrante.foto]);
+ 		repositorio.fechar();
+		return view;
+	}
+	public Integer[] fotos = {
+    		R.drawable.w01,
+>>>>>>> ca2e7340ad4acbef040a7994df5439de5a30b20e
 			R.drawable.w02,
 			R.drawable.w03,
 			R.drawable.w04,
@@ -128,7 +152,13 @@ public class PalestraListAdapter extends BaseAdapter {
 			R.drawable.w58,
 			R.drawable.w59,
 			R.drawable.w60,
+<<<<<<< HEAD
 
 	};
 
+=======
+							
+    };
+	
+>>>>>>> ca2e7340ad4acbef040a7994df5439de5a30b20e
 }
