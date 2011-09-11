@@ -5,9 +5,9 @@
 	<include
 		layout="@layout/actionbar" />
 	<ScrollView android:id="@+id/scrollView1" android:layout_width="fill_parent" android:layout_height="wrap_content">
-		<LinearLayout android:id="@+id/linearLayout5" android:layout_width="fill_parent" android:layout_height="fill_parent" android:orientation="vertical" android:padding="5dp">
+		<LinearLayout android:id="@+id/linearLayout5" android:layout_width="fill_parent" android:layout_height="fill_parent" android:orientation="vertical" android:paddingLeft="5dp" android:paddingRight="5dp" android:paddingBottom="5dp">
 			<LinearLayout android:id="@+id/linearLayout4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical">
-				<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/linearLayout1" android:orientation="horizontal">
+				<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/linearLayout1" android:orientation="horizontal" android:gravity="center">
 					<LinearLayout android:orientation="vertical" android:layout_height="wrap_content" android:id="@+id/linearLayout2" android:gravity="center" android:layout_width="230dp">
 						<TextView android:id="@+id/titulo" android:text="Palestra: Aprendizados de grandes sistemas HTTP-centric." android:layout_width="wrap_content" android:textSize="18dp" android:layout_height="wrap_content" android:textColor="#444444"></TextView>
 						<TextView android:id="@+id/palestrante" android:text="Jim Webber" android:layout_width="wrap_content" android:textSize="18dp" android:layout_height="wrap_content" android:textColor="#015daa"></TextView>
@@ -21,10 +21,6 @@
 					<TextView android:textColor="#686868" android:id="@+id/resumo" android:layout_width="wrap_content" android:textSize="16dp" android:layout_height="wrap_content" android:text="Veremos como usar middleware comum de HTML para criar sistemas REST em larga escala usando agile e técnicas devops-friendly. Vamos explorar falácias sobre arquitetura e custo de middleware tradicional e ver como soluções open source e gratuitas podem ser usadas para entregar soluções escaláveis.  "></TextView>
 					<TextView android:textColor="#686868" android:layout_width="wrap_content" android:textSize="16dp" android:layout_height="wrap_content" android:id="@+id/horario" android:text="Horario"></TextView>
 				</LinearLayout>
-			</LinearLayout>
-			<LinearLayout android:id="@+id/linearLayout6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center">
-				<TextView android:textColor="#444444" android:text="Dê sua nota para essa palestra!" android:id="@+id/TextView02" android:layout_width="wrap_content" android:textSize="18dp" android:layout_height="wrap_content"></TextView>
-				<RatingBar android:id="@+id/ratingBar1" android:layout_width="wrap_content" android:layout_height="wrap_content"></RatingBar>
 			</LinearLayout>
 			<LinearLayout android:id="@+id/linearLayout7" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="right" android:padding="10dp">
 				<ImageButton android:src="@drawable/share" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/share" android:background="#FFFFFF"></ImageButton>

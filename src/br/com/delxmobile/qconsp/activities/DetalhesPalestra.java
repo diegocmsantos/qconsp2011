@@ -43,7 +43,7 @@ public class DetalhesPalestra extends Activity {
 		c = repositorio.buscarPalestra(id);
 		aux = repositorio_palestrante.buscarPalestranteNome(c.palestrante);
 		
-		String title = c.dia;
+		String title = c.dia + ",  " + c.horario;
 		mActivityHelper.setupActionBar(title);
 		
 		

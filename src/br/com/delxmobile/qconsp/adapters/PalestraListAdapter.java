@@ -7,6 +7,7 @@ import br.com.delxmobile.qconsp.objects.Palestra;
 import br.com.delxmobile.qconsp.objects.Palestrante;
 import br.com.delxmobile.qconsp.scripts.RepositorioPalestranteScript;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,27 +42,33 @@ public class PalestraListAdapter extends BaseAdapter {
 
 		RepositorioPalestrante repositorio = new RepositorioPalestranteScript(context);
 		Palestrante aux_palestrante = repositorio.buscarPalestranteNome(c.palestrante);
-		
+
 		LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		View view = inflater.inflate(R.layout.palestra_linha_tabela, null);
 
 		// Atualiza o valor do TextView
 		TextView titulo = (TextView) view.findViewById(R.id.palestra);
 		titulo.setText(c.titulo);
-		
-		TextView palestrante = (TextView) view.findViewById(R.id.palestrante);
-		palestrante.setText(c.palestrante);
 
 		TextView horario = (TextView) view.findViewById(R.id.horario);
 		horario.setText(c.horario);
-		
+
+		TextView palestrante = (TextView) view.findViewById(R.id.palestrante);
 		ImageView foto = (ImageView) view.findViewById(R.id.foto);
-		foto.setImageResource(fotos[aux_palestrante.foto]);
- 		repositorio.fechar();
+
+		if(c.palestrante.equals("")){
+			foto.setVisibility(4);
+			palestrante.setVisibility(4);
+		}
+		else{
+			foto.setImageResource(fotos[aux_palestrante.foto]);
+			palestrante.setText(c.palestrante);
+		}
+		repositorio.fechar();
 		return view;
 	}
 	public Integer[] fotos = {
-    		R.drawable.w01,
+			R.drawable.w01,
 			R.drawable.w02,
 			R.drawable.w03,
 			R.drawable.w04,
@@ -121,7 +128,7 @@ public class PalestraListAdapter extends BaseAdapter {
 			R.drawable.w58,
 			R.drawable.w59,
 			R.drawable.w60,
-							
-    };
-	
+
+	};
+
 }

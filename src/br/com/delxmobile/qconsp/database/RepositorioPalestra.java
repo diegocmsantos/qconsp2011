@@ -50,6 +50,7 @@ public class RepositorioPalestra {
 			int idxPalestrante = c.getColumnIndex(Palestras.PALESTRANTE);
 			int idxResumo = c.getColumnIndex(Palestras.RESUMO);
 			int idxDia = c.getColumnIndex(Palestras.DIA);
+			int idxTrilha = c.getColumnIndex(Palestras.TRILHA);
 
 			Palestra palestra = new Palestra();
 
@@ -61,6 +62,7 @@ public class RepositorioPalestra {
 			palestra.palestrante = c.getString(idxPalestrante);
 			palestra.resumo = c.getString(idxResumo);
 			palestra.dia = c.getString(idxDia);
+			palestra.trilha = c.getInt(idxTrilha);
 
 			return palestra;
 		}
@@ -69,9 +71,9 @@ public class RepositorioPalestra {
 	}
 
 	// Retorna um cursor com palestras no sabado
-	public Cursor getCursorSabado() {
+	public Cursor getCursor(String dia, int trilha) {
 		try {
-			return  db.query(NOME_TABELA, Palestra.colunas, null, null, null, null, null,null);
+			return  db.query(NOME_TABELA, Palestra.colunas, Palestras.DIA + "= '" + dia + "' and " + Palestras.TRILHA + "= '" + trilha + "'", null, null, null, null,null);
 		} catch (SQLException e) {
 			Log.e(CATEGORIA ,"  "+  e);
 			return null;
@@ -80,8 +82,8 @@ public class RepositorioPalestra {
 	}
 
 	// Retorna uma lista com palestras no sabado
-	public List<Palestra> listarPalestraSabado() {
-		Cursor c = getCursorSabado();
+	public List<Palestra> listarPalestra(String dia , int trilha) {
+		Cursor c = getCursor(dia, trilha);
 
 		List<Palestra> palestras = new ArrayList<Palestra>();
 
@@ -94,6 +96,7 @@ public class RepositorioPalestra {
 			int idxPalestrante = c.getColumnIndex(Palestras.PALESTRANTE);
 			int idxResumo = c.getColumnIndex(Palestras.RESUMO);
 			int idxDia = c.getColumnIndex(Palestras.DIA);
+			int idxTrilha = c.getColumnIndex(Palestras.TRILHA);
 
 			// Loop at� o final
 			do {
@@ -106,6 +109,7 @@ public class RepositorioPalestra {
 				palestra.palestrante = c.getString(idxPalestrante);
 				palestra.resumo = c.getString(idxResumo);
 				palestra.dia = c.getString(idxDia);
+				palestra.trilha = c.getInt(idxTrilha);
 
 
 			} while (c.moveToNext());
